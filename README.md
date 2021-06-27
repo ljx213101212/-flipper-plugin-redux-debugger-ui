@@ -27,6 +27,8 @@ yarn start --reset-cache
 ```
 ## Contrubution learning  
 
+### How to get started?  
+https://www.youtube.com/watch?v=GbqSvJs-6W4  
 ### basic  
 https://fbflipper.com/docs/extending/create-plugin   
 ### Publish  
@@ -44,6 +46,12 @@ https://fbflipper.com/docs/extending/debugging
 4. Restart Flipper 
 5. "View" -> "Toggle Developer Tools"  
 ```
+
+### To Do List  
+
+- [ ] Cannot read property 'type' of undefined. #30
+
+
 
 ## Acknowledge  
 This is App is for testing https://github.com/jk-gan/flipper-plugin-redux-debugger
