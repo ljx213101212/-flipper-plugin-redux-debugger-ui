@@ -2,6 +2,16 @@
  To test flipper-plugin-redux-debugger
 
 
+## dependencies  
+
+```
+"react-native": "0.64.2",
+"react-native-flipper": "^0.95.0",
+"react-redux": "^7.2.4",
+"redux": "^4.1.0",
+"redux-flipper": "^1.4.2"
+```
+
 ## Quick Start   
 ```
 1. yarn 
@@ -14,6 +24,25 @@
 ```
 yarn anndroid
 yarn start --reset-cache
+```
+## Contrubution learning  
+
+### basic  
+https://fbflipper.com/docs/extending/create-plugin   
+### Publish  
+https://fbflipper.com/docs/extending/public-releases  
+
+
+### debugging  
+https://fbflipper.com/docs/extending/plugin-distribution  
+https://fbflipper.com/docs/extending/debugging 
+
+```
+1. install "Redux Debugger" from "View" -> "Manage Plugin" -> "Search Flipper Plugins..."
+2. cd C:\Users\user\.flipper\installed-plugins\flipper-plugin-redux-debugger\1.2.2
+3. swap "dist" folder, index.tsx, package.json with your updated one.
+4. Restart Flipper 
+5. "View" -> "Toggle Developer Tools"  
 ```
 
 ## Acknowledge  
