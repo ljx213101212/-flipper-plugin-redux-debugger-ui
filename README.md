@@ -50,7 +50,7 @@ https://fbflipper.com/docs/extending/debugging
 
 ### To Do List  
 
-- [ ] Cannot read property 'type' of undefined. #30
+- [ ] [Cannot read property 'type' of undefined. #30](https://github.com/jk-gan/flipper-plugin-redux-debugger/issues/30)
 
 
 
