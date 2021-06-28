@@ -4,6 +4,7 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import countReducer from '../reducers/countReducer';
 import modeReducer from '../reducers/modeReducer';
+import createDebugger from './reduxFlipper';
 
 const rootReducer = combineReducers({
   count: countReducer,
@@ -15,8 +16,8 @@ const configureStore = () => {
   ];
 
   if (__DEV__) {
-    const createDebugger = require('redux-flipper').default;
-    middlewares.push(createDebugger(), thunk, logger);
+    //const createDebugger = require('redux-flipper').default;
+    middlewares.push(thunk, createDebugger(), logger);
   }
   const store = createStore(
     rootReducer,
