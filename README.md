@@ -40,6 +40,18 @@ https://fbflipper.com/docs/extending/public-releases
 https://fbflipper.com/docs/extending/plugin-distribution  
 https://fbflipper.com/docs/extending/debugging 
 
+### Open source work flow  
+```
+1. fork 
+2. try to change my forked repo based on issue description and fix bug
+3. commit to my forked repo
+4. yarn prepack
+5. copy dist, index.tsx, package.json to C:\Users\user\.flipper\installed-plugins\flipper-plugin-redux-debugger\1.2.2
+6. restart flipper and toggle dev tool
+7. check the bug fixed.
+8. pull request
+```
+
 ```
 1. install "Redux Debugger" from "View" -> "Manage Plugin" -> "Search Flipper Plugins..."
 2. cd C:\Users\user\.flipper\installed-plugins\flipper-plugin-redux-debugger\1.2.2

@@ -1,6 +1,6 @@
-import { COUNTER_CHANGE } from "../constants";
+import {COUNTER_CHANGE} from '../constants';
 export function changeCount(count) {
-  console.log("COUNTER_CHANGE", count);
+  console.log('COUNTER_CHANGE', count);
   return {
     type: COUNTER_CHANGE,
     payload: count,

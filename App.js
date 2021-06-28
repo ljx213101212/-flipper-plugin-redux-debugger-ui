@@ -30,6 +30,7 @@ import {
 import {connect, useSelector} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as countActions from './actions/counts';
+import * as modeActions from './actions/mode';
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -62,6 +63,7 @@ const ReduxTest = props => {
     console.log('App started!', props);
   }, []);
   const count = useSelector(state => state.count.count);
+  const mode = useSelector(state => state.mode.mode);
 
   //const [count, setCount] = useState(0);
   const decrementCount = () => {
@@ -76,20 +78,35 @@ const ReduxTest = props => {
     //console.log("increase 1", count);
   };
 
+  const toggleMode = () => {
+    if (typeof mode === undefined) {
+      mode = true;
+    }
+    props.actions.setCurrentMode(!mode);
+  };
+
   return (
     <View styles={styles.container}>
       <Text>Hello</Text>
       <Button title="increment" onPress={() => incrementCount()} />
       <Text style={styles.textCenter}>{count}</Text>
       <Button title="decrement" onPress={() => decrementCount()} />
+
+      <Text>Issue #30</Text>
+      <Button title="toggle mode" onPress={() => toggleMode()} />
     </View>
   );
 };
 const mapStateToProps = state => ({
   count: state.count.count,
+  mode: state.mode.mode,
 });
 
-const ActionCreators = Object.assign({}, countActions);
+// const ActionCreators = Object.assign({}, countActions);
+const ActionCreators = {
+  ...countActions,
+  ...modeActions,
+};
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(ActionCreators, dispatch),
 });
